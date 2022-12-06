@@ -17,8 +17,17 @@
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": true,
+        "classes": false,
+        "variables": true,
+        "allowNamedExports": false
+      }
+    ],
     "camelcase": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
